@@ -27,7 +27,8 @@
     $newsController = new NewsController($pdo);
     $newsData = $newsController->index();
     $news = $newsData['news'];
-    $totalPages = $newsData['total'];
+    $curPage = $newsData['curPage'];
+    $totalPages = ceil($newsData['total'] / 4);
 
     require_once('./components/header.php');
     require_once('./components/banner.php');

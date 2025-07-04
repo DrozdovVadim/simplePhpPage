@@ -16,7 +16,7 @@ class NewsController
         $offset = ($page - 1) * $this->limit;
         $news = $this->news_model->getNews($this->limit, $offset);
         $total = $this->news_model->getNewsCount();
-        return ['news' => $news, 'total' => $total];
+        return ['news' => $news, 'total' => $total, 'curPage' => $page];
     }
 
 }

@@ -191,3 +191,26 @@ img
     color: white;
     background-color: #841844;
 }
+.footer-container
+{
+    padding-top: 65px;
+    margin-bottom: 85px;
+    border-top: 1px solid #6C6E7B;
+}
+.footer-container p
+{
+    font-family: Open Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0%;
+
+}
+.news-pagination
+{
+    margin-bottom: 83px;
+    margin-left: auto;
+    width: fit-content;
+    margin-right: 0;
+}

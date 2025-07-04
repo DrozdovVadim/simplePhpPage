@@ -19,9 +19,42 @@
             <?php endforeach ?>
         </div>
     </div>
-    <div>
-        <?php for ($i = 1; $i <= ceil($totalPages / 4); $i++): ?>
-            <a href="?page=<?= $i ?>"><?= $i ?></a>
-        <?php endfor; ?>
+    <div class="container">
+        <div class="news-pagination">
+            <?php
+            if ($totalPages <= 3) {
+                $start = 1;
+                $end = $totalPages;
+            } else {
+                if ($curPage == 1) {
+                    $start = 1;
+                    $end = 3;
+                } elseif ($curPage == $totalPages) {
+                    $start = $totalPages - 2;
+                    $end = $totalPages;
+                } else {
+                    $start = $curPage - 1;
+                    $end = $curPage + 1;
+                }
+            }
+            ?>
+            <?php if ($curPage == $totalPages): ?>
+                <a href="?page=<?= $curPage - 1 ?>">&larr;</a>
+            <?php endif; ?>
+            <?php for ($i = $start; $i <= $end; $i++): ?>
+                <?php if ($i == $curPage): ?>
+                    <span><?= $i ?></span>
+                <?php else: ?>
+                    <a href="?page=<?= $i ?>"><?= $i ?></a>
+                <?php endif; ?>
+            <?php endfor; ?>
+
+            <?php if ($curPage < $totalPages): ?>
+                <a href="?page=<?= $curPage + 1 ?>">&rarr;</a>
+            <?php endif; ?>
+
+
+        </div>
     </div>
+
 </section>
