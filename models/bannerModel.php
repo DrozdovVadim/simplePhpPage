@@ -8,7 +8,7 @@ class BannerModel
     }
     public function getBanner()
     {
-        $req = $this->db->prepare("SELECT title, announce, image FROM news;");
+        $req = $this->db->prepare("SELECT id, title, announce, image FROM news;");
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }

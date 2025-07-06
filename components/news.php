@@ -4,13 +4,13 @@
             Новости
         </h2>
         <div class="news-wrapper">
-            <?php foreach ($news as $new): ?>
+            <?php foreach ($news['news'] as $new): ?>
                 <?php
                 $date = htmlentities($new['date']);
                 $date = substr($date, 8, 2) . "." . substr($date, 5, 2) . "." . substr($date, 0, 4);
                 ?>
 
-                    <a href="./?page=new&id=<?= htmlentities($new['id']) ?>" class="news-item">
+                    <a href="./?page=news&id=<?= htmlentities($new['id']) ?>" class="news-item">
                     <div class="news-item__date"><?= $date ?></div>
                     <h3 class="news-item__title"><?= htmlentities($new['title']) ?></h3>
                     <?= strip_tags($new['announce'], '<p><br>') ?>
@@ -22,6 +22,8 @@
     <div class="container">
         <div class="news-pagination">
             <?php
+            $totalPages = ceil($news['total'] / 4);
+            $curPage = $news['curPage'];//
             if ($totalPages <= 3) {
                 $start = 1;
                 $end = $totalPages;

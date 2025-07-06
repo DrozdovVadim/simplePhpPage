@@ -15,17 +15,14 @@
 
 <?php
 require_once('./database.php');
-require_once('./models/BannerModel.php');
 require_once('./models/newsModel.php');
-require_once('./models/currentNewsModel.php');
 require_once('./controller/newsController.php');
 require_once('./controller/currentNewsController.php');
+require_once('./controller/bannerController.php');
 
-// Общие данные (например, баннер)
-$bannerModel = new BannerModel($pdo);
-$banners = $bannerModel->getBanner();
 
-// Роутинг
+
+
 $route = isset($_GET["page"]) ? $_GET["page"] : 'home';
 $page = isset($_GET['p']) ? (int)$_GET['p'] : 1;
 $newId = isset($_GET['id']) ? (int)$_GET['id'] : '';
@@ -34,19 +31,15 @@ $newId = isset($_GET['id']) ? (int)$_GET['id'] : '';
 switch ($route) {
     case 'home':
         $newsController = new NewsController($pdo);
-        $newsData = $newsController->index($page);
-
-        $news = $newsData['news'];
-        $curPage = $newsData['curPage'];
-        $totalPages = ceil($newsData['total'] / 4);
-
+        $news = $newsController->index($page);
+        $bannerController = new BannerController($pdo);
+        $banners = $bannerController->index();
         require_once('./components/header.php');
         require_once('./components/banner.php');
         require_once('./components/news.php');
         require_once('./components/footer.php');
         break;
-
-    case 'new':
+    case 'news':
         $currentNewsController = new CurrentNewController($pdo);
         $currentNew = $currentNewsController->index($newId);
 
@@ -58,6 +51,7 @@ switch ($route) {
     default:
         http_response_code(404);
         echo "<h1>404 - Страница не найдена</h1>";
+        echo '<a href="http://localhost/siteTest/?page=home">Вернуться на Главную</a>';
         break;
 }
 ?>

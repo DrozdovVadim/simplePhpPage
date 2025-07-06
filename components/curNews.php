@@ -1,6 +1,10 @@
 <section class="section news-detail__section">
     <div class="container">
-        <div class="breadcrumbs">breadcrumbs</div>
+        <div class="breadcrumbs">
+            <a href="http://localhost/siteTest/?page=home">Главная</a>
+            <span class="breadcrumbs__stick">/</span>
+            <span class="breadcrumbs__cur-page"> <?= htmlentities($currentNew['title'])?></span>
+        </div>
         <div class="new">
             <h1 class="news-detail__title"><?= htmlentities($currentNew['title'])?></h1>
             <div class="news-detail">

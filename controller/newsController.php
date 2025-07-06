@@ -1,4 +1,5 @@
 <?php
+require_once('./models/newsModel.php');
 class NewsController
 {
     private $news_model;
@@ -17,5 +18,5 @@ class NewsController
         $total = $this->news_model->getNewsCount();
         return ['news' => $news, 'total' => $total, 'curPage' => $page];
     }
-
+    
 }

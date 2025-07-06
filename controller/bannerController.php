@@ -1,5 +1,5 @@
 <?php
-require_once('../models/bannerModel.php');
+require_once('./models/bannerModel.php');
 class BannerController
 {
     private $banner_model;
@@ -10,6 +10,6 @@ class BannerController
     public function index()
     {
         $banners = $this->banner_model->getBanner();
-        require '../components/banner.php';
+        return $banners;
     }
 }
