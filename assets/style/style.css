@@ -128,6 +128,9 @@ img
     gap: 30px;
     cursor: pointer;
     justify-content: space-between;
+    text-decoration: none;
+    color:unset;
+    outline: none;
 }
 .news-item__date
 {
@@ -264,4 +267,100 @@ img
 .arrow-prev svg
 {
  rotate: 180deg;
+}
+.news-detail__section
+{
+    padding-top: 72px;
+    border-top: 1px solid #6C6E7B;
+}
+.breadcrumbs
+{
+    margin-bottom: 20px;
+}
+.news-detail__title
+{
+    font-family: Open Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 64px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    margin-bottom: 63px;
+}
+.news-detail
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+        margin-bottom: 140px;
+}
+.news-detail__text
+{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+.news-detail__img
+{
+    width: 45%;
+    width: 740px;
+    height: 570px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.news-detail__announce 
+{
+    font-family: Open Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #841844;
+
+}
+.news-detail__content
+{
+    display: flex;
+    flex-direction: column;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    row-gap: 22px;
+}
+.news-detail__link
+{
+    gap: 10px;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    color: #841844;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    padding: 16px 41px;
+    border: 2px solid #9B407A; 
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.news-detail__link:hover
+{
+    background-color: #841844;
+    color:white;
+}
+.news-detail__link:hover path
+{
+    fill: white;
 }

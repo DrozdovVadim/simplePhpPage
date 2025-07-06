@@ -8,9 +8,8 @@ class NewsController
         $this->news_model = new NewsModel($db);
     }
 
-    public function index()
+    public function index($page=1)
     {
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
         if ($page < 1)
             $page = 1;
         $offset = ($page - 1) * $this->limit;
