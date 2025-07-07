@@ -16,11 +16,8 @@
                     $announce = str_replace(['<p>', '</p>'], '', $announce);
                     ?>
                     <div class="news-item__date"><?= htmlentities($date) ?></div>
-
                     <h2 class="news-detail__announce"><?= htmlentities($announce) ?></h2>
-
-
-
+                    <img class="news-detail__img hidden-img" src="/assets/images/newsPhoto/<?= htmlentities($currentNew['image']) ?>" alt="newPhoto">   
                     <div class="news-detail__content">
                         <?= strip_tags($currentNew['content'], '<p>,</p>,<br>,<em>') ?>
                     </div>
