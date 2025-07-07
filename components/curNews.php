@@ -12,14 +12,17 @@
                     <?php
                     $date = htmlentities($currentNew['date']);
                     $date = substr($date, 8, 2) . "." . substr($date, 5, 2) . "." . substr($date, 0, 4);
+                    $announce = $currentNew['announce'];
+                    $announce = str_replace(['<p>', '</p>'], '', $announce);
                     ?>
                     <div class="news-item__date"><?= htmlentities($date) ?></div>
 
-                    <div class="news-detail__announce"><?= strip_tags($currentNew['announce'], '<p>,</p>,<br>,<em>') ?>
-                    </div>
+                    <h2 class="news-detail__announce"><?= htmlentities($announce) ?></h2>
 
 
-                    <div class="news-detail__content"><?= strip_tags($currentNew['content'], '<p>,</p>,<br>,<em>') ?>
+
+                    <div class="news-detail__content">
+                        <?= strip_tags($currentNew['content'], '<p>,</p>,<br>,<em>') ?>
                     </div>
 
                     <a class="news-detail__link" href="http://194.147.33.204/"><svg width="26" height="16"
@@ -32,9 +35,9 @@
                 </div>
                 <img class="news-detail__img" src="/assets/images/newsPhoto/<?= htmlentities($currentNew['image']) ?>"
                     alt="newPhoto">
+
+
             </div>
 
         </div>
-
-    </div>
 </section>

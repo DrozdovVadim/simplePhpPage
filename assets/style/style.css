@@ -184,7 +184,14 @@ a
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: uppercase;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.news-item__link svg
+{
+    rotate: 180deg;
 }
 .news-item p
 {
@@ -204,6 +211,10 @@ a
 {
     color: white;
     background-color: #841844;
+}
+.news-item:hover path
+{
+    fill: white;
 }
 .footer-container
 {
@@ -316,8 +327,7 @@ a
 .news-detail__img
 {
     width: 45%;
-    width: 740px;
-    height: 570px;
+    aspect-ratio: 13/10;
     margin-top: auto;
     margin-bottom: auto;
 }
