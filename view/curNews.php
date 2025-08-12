@@ -3,23 +3,23 @@
         <div class="breadcrumbs">
             <a href="/">Главная</a>
             <span class="breadcrumbs__stick">/</span>
-            <span class="breadcrumbs__cur-page"> <?= htmlentities($currentNew['title']) ?></span>
+            <span class="breadcrumbs__cur-page"> <?= htmlentities($new['title']) ?></span>
         </div>
         <div class="new">
-            <h1 class="news-detail__title"><?= htmlentities($currentNew['title']) ?></h1>
+            <h1 class="news-detail__title"><?= htmlentities($new['title']) ?></h1>
             <div class="news-detail">
                 <div class="news-detail__text">
                     <?php
-                    $date = htmlentities($currentNew['date']);
+                    $date = htmlentities($new['date']);
                     $date = substr($date, 8, 2) . "." . substr($date, 5, 2) . "." . substr($date, 0, 4);
-                    $announce = $currentNew['announce'];
+                    $announce = $new['announce'];
                     $announce = str_replace(['<p>', '</p>'], '', $announce);
                     ?>
                     <div class="news-item__date"><?= htmlentities($date) ?></div>
                     <h2 class="news-detail__announce"><?= htmlentities($announce) ?></h2>
-                    <img class="news-detail__img hidden-img" src="/assets/images/newsPhoto/<?= htmlentities($currentNew['image']) ?>" alt="newPhoto">   
+                    <img class="news-detail__img hidden-img" src="/assets/images/newsPhoto/<?= htmlentities($new['image']) ?>" alt="newsPhoto">   
                     <div class="news-detail__content">
-                        <?= strip_tags($currentNew['content'], '<p>,</p>,<br>,<em>') ?>
+                        <?= strip_tags($new['content'], '<p>,</p>,<br>,<em>') ?>
                     </div>
 
                     <a class="news-detail__link" href="/"><svg width="26" height="16"
@@ -30,7 +30,7 @@
                         </svg>
                         Назад к новостям</a>
                 </div>
-                <img class="news-detail__img" src="/assets/images/newsPhoto/<?= htmlentities($currentNew['image']) ?>"
+                <img class="news-detail__img" src="/assets/images/newsPhoto/<?= htmlentities($new['image']) ?>"
                     alt="newPhoto">
 
 
