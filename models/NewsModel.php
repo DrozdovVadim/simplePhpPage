@@ -18,7 +18,7 @@ class NewsModel
         $req->bindValue(':limit', (int) $limit, PDO::PARAM_INT);
         $req->bindValue(':offset', (int) $offset, PDO::PARAM_INT);
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_ASSOC);
+        return $req->fetchAll(PDO::FETCH_ASSOC); 
     }
 
     public function getCount()
