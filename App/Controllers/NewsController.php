@@ -12,36 +12,37 @@ class NewsController
     {
         return new NewsModel();
     }
-    
-    public function showMain()
+    private function showContent($name, $data = [])
     {
-        require_once("view/header.php");
-        require_once("view/main.php");
-        require_once("view/footer.php");
+        return require_once($name);
     }
-
+    
     public function showList($page=1)
     {
+        $newsModel = new NewsModel();
+        $name = "view/news/list.php";
         $offset = ($page - 1) * $this->limit;
         $banners = $this->GetModel()->getBanners();
         $news = $this->GetModel()->getRows($this->limit, $offset);
-        $newsModel = new NewsModel();
-        $page = max(1, $page);
         $total = $this->GetModel()->getCount();
-        $newsData = ['news' => $news, 'total' => $total, 'curPage' => $page,];
-        require_once("view/header.php");
-        require_once("view/banner.php");
-        require_once("view/news.php");
-        require_once("view/footer.php");
+        $page = max(1, $page);
+        
+        $newsData = ['news' => $news, 'total' => $total, 'curPage' => $page, 'banners' => $banners];
+        ob_start();
+        $this->showContent($name, $newsData);
+        $content = ob_get_clean();
+        require_once("view/templates/layout.php");
     }
 
      public function showDetail($id)
     {
+        $name = "view/news/detail.php";
         $newsModel = new NewsModel();
         $new = $this->GetModel()->getItem($id); 
-        require_once("./view/header.php");
-        require_once("./view/curNews.php");
-        require_once("./view/footer.php");
+        ob_start();
+        $this->showContent($name, $new);
+        $content = ob_get_clean();
+        require_once("view/templates/layout.php");
     }
 
 

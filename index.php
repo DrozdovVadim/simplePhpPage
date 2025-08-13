@@ -20,46 +20,50 @@
 
         $class_name = str_replace("\\", "/", $class);
         $file = __DIR__ . "/" . $class_name . ".php";
-        if(file_exists($file))
-        {
+        if(file_exists($file)){
             require_once($file);
         }
     });
 
     use App\Controllers\NewsController;
+    use App\Controllers\BaseController;
     use App\Models\NewsModel;
     
     $route = isset($_GET["page"]) ? $_GET["page"] : 'home';
     $page = isset($_GET['p']) ? (int) $_GET['p'] : 1;
     $newId = isset($_GET['id']) ? (int) $_GET['id'] : '';
 
-    switch ($route) {
-        case 'home':
-            
-            $newsController = new NewsController();
-            $newsController->showMain();
-            break;
+    $matches=[];
+    $requestUri = $_SERVER['REQUEST_URI'];
+    switch (true) {
+    case $requestUri === '/':
+        $BaseController = new BaseController();
+        $BaseController->showMain();
+        break;
 
-        case 'newslist':
-            
-            $newsController = new NewsController();
-            $newsController->showList($page);
-            break;
+    case $requestUri === '/news/':
+        $newsController = new NewsController();
+        $newsController->showList($page);
+        break;
 
-        case 'news':
-            $newsController = new NewsController();
-            $newsController->showDetail($newId);
-            break;
+    case preg_match('~^/news/(\d+)/$~', $requestUri, $matches):
+        $newsController = new NewsController();
+        $newsController->showDetail($matches[1]);
+        break;
+    case preg_match('~^/news/page-(\d+)/$~', $requestUri, $matches):
+        $newsController = new NewsController();
+        $newsController->showList($matches[1]);
+        break;
 
-        default:
-            http_response_code(404);
-            echo "<h1>404 - Страница не найдена</h1>";
-            echo '<a href="/?page=home">Вернуться на Главную</a>';
-            break;
-    }
+    default:
+        $baseController = new BaseController();
+        $baseController->show404();
+
+        break;
+}
     ?>
 
-    <script src="./assets/script/main.js"></script>
+    <script src="/assets/script/main.js"></script>
 </body>
 
 </html>
