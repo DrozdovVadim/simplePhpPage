@@ -1,30 +1,38 @@
 <?php 
 namespace App\Controllers;
 
+
 class BaseController
 {
-    private function showContent($name, $data = [])
+
+    protected function render($template, $layout, $data = [])
     {
         extract($data);
-        return require_once("view/base/" . $name . ".php");
+        $templatePath = "view/" . $template . ".php";
+        $layoutPath = "view/" . $layout . ".php";
+        ob_start();
+        require_once($templatePath);
+        $content = ob_get_clean();
+        require_once($layoutPath);
     }
+
     public function showMain()
     {
-        $name = "view/base/main.php";
-        ob_start();
-        $this->showContent($name);
-        $content = ob_get_clean();
-        require_once("view/templates/layout.php");
+        $template = "base/main";
+        $layout = "layouts/deafult";
+        $this->render($template, $layout);
     }
     
     public function show404()
     {
-        $name = "view/base/404.php";
+        $template = "base/404";
+        $layout = "layouts/deafult";
         http_response_code(404);
-        ob_start();
-        $this->showContent($name);
-        $content = ob_get_clean();
-        require_once("view/templates/layout.php");
+        $this->render($template, $layout);
+    }
+    public function pagination($parent, $total)
+    {   
+        return null;
     }
 
 }

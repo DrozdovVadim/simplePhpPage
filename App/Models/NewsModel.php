@@ -13,9 +13,9 @@ class NewsModel
         return $req->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function getRows($limit, $offset)
+    public function getRows($limit, $offset, $tableName)
     {
-        $req = DB::getConnection()->prepare("SELECT id, title, date, announce FROM news ORDER BY date DESC LIMIT :limit OFFSET :offset;");
+        $req = DB::getConnection()->prepare("SELECT id, title, date, announce FROM `$tableName` ORDER BY date DESC LIMIT :limit OFFSET :offset;");
         $req->bindValue(':limit', (int) $limit, \PDO::PARAM_INT);
         $req->bindValue(':offset', (int) $offset, \PDO::PARAM_INT);
         $req->execute();

@@ -1,13 +1,12 @@
 <section class="section banner__section swiper">
     <div class="swiper-wrapper banner__wrapper">
+        <?php foreach ($banners as ['id'=> $id, 'image' => $image, 'title' => $title, 'announce' => $announce]): ?>
 
-        <?php foreach ($data['banners'] as $banner): ?>
-
-            <a href="/news/<?= htmlentities($banner['id']) ?>/" class="swiper-slide">
-                <img src="/assets/images/newsPhoto/<?= htmlspecialchars($banner['image']) ?>" alt="Banner image">
+            <a href="/news/<?= $id ?>/" class="swiper-slide">
+                <img src="/assets/images/newsPhoto/<?= $image ?>" alt="Banner image">
                 <div class="container banner-item__text">
-                    <h2><?= htmlentities($banner['title']) ?></h2>
-                    <?= strip_tags($banner['announce'], '<p><br><strong><em>') ?>
+                    <h2><?= $title ?></h2>
+                    <?= $announce ?>
                 </div>
             </a>
         <?php endforeach; ?>
@@ -21,16 +20,15 @@
         </h1>
         
         <div class="news-wrapper">
-            <?php foreach ($data['news'] as $new): ?>
+            <?php foreach ($news as ['date'=> $date, 'id'=>$id, 'title'=>$title, 'announce'=>$announce]): ?>
                 <?php
-                $date = htmlentities($new['date']);
-                $date = substr($date, 8, 2) . "." . substr($date, 5, 2) . "." . substr($date, 0, 4);
+                $date = date("d.m.Y", strtotime($date));
                 ?>
 
-                <a href="/news/<?= htmlentities($new['id']) ?>/" class="news-item">
+                <a href="/news/<?= htmlentities($id) ?>/" class="news-item">
                     <div class="news-item__date"><?= $date ?></div>
-                    <h2 class="news-item__title"><?= htmlentities($new['title']) ?></h2>
-                    <?= strip_tags($new['announce'], '<p><br>') ?>
+                    <h2 class="news-item__title"><?= $title ?></h2>
+                    <?= $announce ?>
                     <div class="news-item__link">Подробнее <svg width="26" height="16" viewBox="0 0 26 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -43,48 +41,45 @@
     </div>
     <div class="container">
         <div class="news-pagination">
+            
             <?php
-            $totalPages = ceil($data['total'] / 4);
-            $curPage = $data['curPage'];
-            if ($totalPages <= 3) {
-                $start = 1;
-                $end = $totalPages;
-            } else {
-                if ($curPage == 1) {
-                    $start = 1;
-                    $end = 3;
-                } elseif ($curPage == $totalPages) {
-                    $start = $totalPages - 2;
-                    $end = $totalPages;
-                } else {
-                    $start = $curPage - 1;
-                    $end = $curPage + 1;
+            $start = max(1, $currentPage-1);
+            $end = min($currentPage+2, $totalPages);
+            $currentPagCount = $end-$start+1;
+            if ($currentPagCount>$count){
+                $end-=$currentPagCount- $count;
+            }
+            else if ($currentPagCount<$count){
+                if ($end<$totalPages){
+                    $end+=$count-$currentPagCount;
+                }
+                else{
+                    $start-=$count-$currentPagCount;
+                    
                 }
             }
             ?>
-            <?php if ($curPage == $totalPages): ?>
-                <a class="arrow-prev news-pagination__arrow" href="/news/page-<?= $curPage - 1 ?>/"><svg width="17"
-                        height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM16.466 8.70711C16.8565 8.31658 16.8565 7.68342 16.466 7.29289L10.102 0.928931C9.7115 0.538407 9.07834 0.538407 8.68781 0.928932C8.29729 1.31946 8.29729 1.95262 8.68781 2.34315L14.3447 8L8.68781 13.6569C8.29729 14.0474 8.29729 14.6805 8.68781 15.0711C9.07834 15.4616 9.7115 15.4616 10.102 15.0711L16.466 8.70711ZM1 9L15.7589 9L15.7589 7L1 7L1 9Z"
-                            fill="#841844" />
-                    </svg></a>
+             <?php
+            $arrow = '<svg width="17"
+                                height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM16.466 8.70711C16.8565 8.31658 16.8565 7.68342 16.466 7.29289L10.102 0.928931C9.7115 0.538407 9.07834 0.538407 8.68781 0.928932C8.29729 1.31946 8.29729 1.95262 8.68781 2.34315L14.3447 8L8.68781 13.6569C8.29729 14.0474 8.29729 14.6805 8.68781 15.0711C9.07834 15.4616 9.7115 15.4616 10.102 15.0711L16.466 8.70711ZM1 9L15.7589 9L15.7589 7L1 7L1 9Z"
+                                    fill="#841844" />
+                            </svg>'
+            ?>
+            <?php if ($currentPage > 1): ?>
+                <a class="arrow-prev news-pagination__arrow" href="<?="/" . $listName . "/page-1" ?>/"><?= $arrow ?></a>
             <?php endif; ?>
             <?php for ($i = $start; $i <= $end; $i++): ?>
-                <?php if ($i == $curPage): ?>
+                <?php if ($i == $currentPage): ?>
                     <span class="news-pagination__number news-pagination__active"><?= $i ?></span>
                 <?php else: ?>
-                    <a class="news-pagination__number" href="/news/page-<?= $i ?>/"><?= $i ?></a>
+                    <a class="news-pagination__number" href="<?="/" . $listName . "/page-" . $i ?>/"><?= $i ?></a>
                 <?php endif; ?>
             <?php endfor; ?>
 
-            <?php if ($curPage < $totalPages): ?>
-                <a class="news-pagination__arrow" href="/news/page-<?= $curPage + 1 ?>/"><svg width="17" height="16"
-                        viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM16.466 8.70711C16.8565 8.31658 16.8565 7.68342 16.466 7.29289L10.102 0.928931C9.7115 0.538407 9.07834 0.538407 8.68781 0.928932C8.29729 1.31946 8.29729 1.95262 8.68781 2.34315L14.3447 8L8.68781 13.6569C8.29729 14.0474 8.29729 14.6805 8.68781 15.0711C9.07834 15.4616 9.7115 15.4616 10.102 15.0711L16.466 8.70711ZM1 9L15.7589 9L15.7589 7L1 7L1 9Z"
-                            fill="#841844" />
-                    </svg>
+            <?php if ($currentPage < $totalPages): ?>
+                <a class="news-pagination__arrow" href="<?="/" . $listName . "/page-" . $totalPages ?>/"><?= $arrow ?>
                 </a>
             <?php endif; ?>
 
