@@ -22,9 +22,9 @@ class NewsModel
         return $req->fetchAll(\PDO::FETCH_ASSOC); 
     }
 
-    public function getCount()
+    public function getCount($tableName)
     {
-        $req = DB::getConnection()->prepare("SELECT COUNT(*) as total from news;");
+        $req = DB::getConnection()->prepare("SELECT COUNT(*) as total from `$tableName`;");
         $req->execute();
         return $req->fetch(\PDO::FETCH_ASSOC)['total'];
     }

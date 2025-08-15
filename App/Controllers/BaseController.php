@@ -1,15 +1,21 @@
 <?php 
 namespace App\Controllers;
 
+use App\Models\NewsModel;
 
 class BaseController
 {
 
-    protected function render($template, $layout, $data = [])
+    protected function GetModel()
+    {
+        return new NewsModel();
+    }
+
+    protected function render($template, $data = [])
     {
         extract($data);
         $templatePath = "view/" . $template . ".php";
-        $layoutPath = "view/" . $layout . ".php";
+        $layoutPath = "view/layouts/default.php";
         ob_start();
         require_once($templatePath);
         $content = ob_get_clean();
@@ -20,7 +26,7 @@ class BaseController
     {
         $template = "base/main";
         $layout = "layouts/deafult";
-        $this->render($template, $layout);
+        $this->render($template);
     }
     
     public function show404()
@@ -28,11 +34,8 @@ class BaseController
         $template = "base/404";
         $layout = "layouts/deafult";
         http_response_code(404);
-        $this->render($template, $layout);
+        $this->render($template);
     }
-    public function pagination($parent, $total)
-    {   
-        return null;
-    }
+
 
 }

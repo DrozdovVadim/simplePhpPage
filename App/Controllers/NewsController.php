@@ -1,17 +1,11 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\NewsModel;
-
-
 class NewsController extends BaseController
 {
     private $newsModel;
 
-    private function GetModel()
-    {
-        return new NewsModel();
-    }
+
     
     public function showList($page=1)
     {
@@ -19,9 +13,10 @@ class NewsController extends BaseController
         $limit = 4;
         $offset = ($page - 1) * $limit;
         $tableName = 'news';
+        $generateLink = function($id) {return "/news/" . "page-" . $id . "/";};
         $banners = $this->GetModel()->getBanners();
         $news = $this->GetModel()->getRows($limit, $offset, $tableName);
-        $total = $this->GetModel()->getCount();
+        $total = $this->GetModel()->getCount("news");
         $listName = 'news';
         $data = [
             'news' => $news,
@@ -29,14 +24,15 @@ class NewsController extends BaseController
             'currentPage' => max(1, $page),
             'banners' => $banners,
             'totalPages' => ceil($total / $limit),
-            'listName' => $listName,
+            'link' =>$generateLink,
             'count' => min($paginationElemsCount, ceil($total / $limit)),
         ];
         
         $template = "news/list";
         $layout = "layouts/deafult";
+        $pagination = "base/pagination";
         
-        $this->render($template, $layout, $data);
+        $this->render($template, $data);
         
     }
 
@@ -44,13 +40,14 @@ class NewsController extends BaseController
     {
         
         $data = $this->GetModel()->getItem($id); 
-
         $template = "news/detail";
         $layout = "layouts/deafult";
         
-        $this->render($template, $layout, $data);
+        $this->render($template,  $data);
         
     }
+
+
 
 
 }

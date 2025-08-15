@@ -3,10 +3,7 @@ namespace App;
 
 class DB
 { 
-    private static $host = 'localhost';
-    private static $dbname = 'workspace__test';
-    private static $user = 'root';
-    private static $pass = 'root';
+
     private static $connection;
 
     public static function getConnection()
