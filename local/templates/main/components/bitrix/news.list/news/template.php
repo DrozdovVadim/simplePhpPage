@@ -23,18 +23,17 @@ $this->setFrameMode(true);
         </h1>
 <div class="news-wrapper">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	<? 
 
-		
-
-		extract($arItem);
-		$TIMESTAMP_X = date("d.m.Y", strtotime($TIMESTAMP_X));?>
-	<?
+<?
+$DATE = date("d.m.Y", strtotime($arItem["PROPERTIES"]["CREATION_DATE"]["VALUE"]));
+extract($arItem);
+?>
+<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
 	<a id="<?=$this->GetEditAreaId($ID);?>" href="/news/detail.php?ID=<?=$ID?>" class="news-item">
-        <div class="news-item__date"><?= $TIMESTAMP_X ?></div>
+        <div class="news-item__date"><?= $DATE ?></div>
         <h2 class="news-item__title"><?= $NAME ?></h2>
         <?= $PREVIEW_TEXT ?>
         <div class="news-item__link">Подробнее <svg width="26" height="16" viewBox="0 0 26 16" fill="none"
