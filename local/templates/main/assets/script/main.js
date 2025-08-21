@@ -6,4 +6,3 @@ const swiper = new Swiper('.swiper', {
     delay: 3500,
   },
 })
-console.log("123")

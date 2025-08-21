@@ -2,9 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новость");
 ?><?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", Array(
-	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-		"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+	"PATH" => "",	
+		"SITE_ID" => "s1",	
+		"START_FROM" => "0",	
 	),
 	false
 );?><?$APPLICATION->IncludeComponent(
@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Новость");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => "",
+		"ELEMENT_CODE" => $_REQUEST["ELEMENT_CODE"],
 		"ELEMENT_ID" => $_REQUEST["ID"],
 		"FIELD_CODE" => array(
 			0 => "",
@@ -50,9 +50,10 @@ $APPLICATION->SetTitle("Новость");
 		"PAGER_TEMPLATE" => "main_pagination",
 		"PAGER_TITLE" => "Страница",
 		"PROPERTY_CODE" => array(
-			0 => "CATEGORIES",
-			1 => "CREAION_DATE",
-			2 => "",
+			0 => "",
+			1 => "CATEGORIES",
+			2 => "CREAION_DATE",
+			3 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",

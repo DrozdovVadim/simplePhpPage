@@ -59,6 +59,27 @@ $APPLICATION->SetTitle("Новости");
 		"STRICT_SECTION_CHECK" => "N"
 	)
 );?>
+<?php
+$categoryCode = $_GET['category'];
+
+if ($categoryCode) {
+    $category = CIBlockElement::GetList(
+        [],
+        ["IBLOCK_ID" => 9, "CODE" => $categoryCode, "ACTIVE" => "Y"],
+        false,
+        false,
+        ["ID"]
+    )->Fetch();
+
+    if ($category) {
+        $GLOBALS['arrFilter'] = ["PROPERTY_CATEGORIES" => $category['ID'], "ACTIVE" => "Y"];
+    } else {
+        $GLOBALS['arrFilter'] = ["ACTIVE" => "Y"];
+    }
+} else {
+    $GLOBALS['arrFilter'] = ["ACTIVE" => "Y"];
+}
+?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"news",
@@ -84,7 +105,7 @@ $APPLICATION->SetTitle("Новости");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(0=>"",1=>"",),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "newsList",
@@ -103,7 +124,7 @@ $APPLICATION->SetTitle("Новости");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"CREATION_DATE",1=>"",),
+		"PROPERTY_CODE" => array(0=>"CREATION_DATE",1=>"CATEGORIES",),
 		"SEARCH_PAGE" => "/search/",
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -122,5 +143,4 @@ $APPLICATION->SetTitle("Новости");
 		"USE_RATING" => "N",
 		"USE_SHARE" => "N"
 	)
-);?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

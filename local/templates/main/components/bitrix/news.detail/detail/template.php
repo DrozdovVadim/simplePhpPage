@@ -10,11 +10,12 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-use Bitrix\Iblock\ElementTable;
+
 $this->setFrameMode(true);
 ?>
 
-<? extract($arResult); ?>
+<?php extract($arResult); 
+?>
 <section class="section news-detail__section">
 	<div class="container">
 		<div class="new">
@@ -33,15 +34,11 @@ $this->setFrameMode(true);
                     </div>
                     <div class="news__categories">
                         Темы: 
-                        <? 
-                        if(!empty($arResult["PROPERTIES"]["CATEGORIES"]["VALUE"])): 
-                            $categoriesCount = count($arResult["PROPERTIES"]["CATEGORIES"]["VALUE"]);
-                            for ($i = 0; $i < $categoriesCount; $i++):
-                                $category = ElementTable::getById($arResult["PROPERTIES"]["CATEGORIES"]["VALUE"][$i])->fetch();
-                                ?>
-                                <span><?= $category["NAME"] ?><?= ($i < $categoriesCount - 1) ? ', ' : '.' ?></span>
-                            <? endfor; ?>
-                        <? endif; ?>
+                        <?php if(!empty($NEWS_CATEGORIES)): ?>
+                            <?php foreach($NEWS_CATEGORIES as $category): ?>
+                                <a href="/news/category/<?= $category["CODE"]?>"><?= $category['NAME'] ?></a><?= ($category !== end($NEWS_CATEGORIES)) ? ', ' : '.' ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                     <a class="news-detail__link" href="/news/"><svg width="26" height="16"
                             viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
