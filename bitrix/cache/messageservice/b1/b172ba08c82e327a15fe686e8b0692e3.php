@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001755786379';
-$dateexpire = '001758378379';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";O:25:"Bitrix\\Main\\Type\\DateTime":2:{s:8:"'.chr(0).'*'.chr(0).'value";O:8:"DateTime":3:{s:4:"date";s:26:"2025-09-20 17:26:19.236183";s:13:"timezone_type";i:3;s:8:"timezone";s:13:"Europe/Moscow";}s:18:"'.chr(0).'*'.chr(0).'userTimeEnabled";b:1;}}';
+$datecreate = '001755871274';
+$dateexpire = '001758463274';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";O:25:"Bitrix\\Main\\Type\\DateTime":2:{s:8:"'.chr(0).'*'.chr(0).'value";O:8:"DateTime":3:{s:4:"date";s:26:"2025-09-21 17:01:14.759848";s:13:"timezone_type";i:3;s:8:"timezone";s:13:"Europe/Moscow";}s:18:"'.chr(0).'*'.chr(0).'userTimeEnabled";b:1;}}';
 return true;
 ?>

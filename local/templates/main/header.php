@@ -28,22 +28,18 @@ IncludeTemplateLangFile(__FILE__);
             <img src="<?=SITE_TEMPLATE_PATH."/assets/images/logo.png"?>" alt="logo">
             <p>Галактический<br>вестник</p>
         </a>
-        <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"topMenu", 
-	array(
-		"COMPONENT_TEMPLATE" => "topMenu",
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "2",
-		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "N",
-		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
+        <?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
+	"COMPONENT_TEMPLATE" => "horizontal_multilevel",
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_USE_GROUPS" => "N",	// Учитывать права доступа
+		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+		"MAX_LEVEL" => "2",	// Уровень вложенности меню
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"ALLOW_MULTI_SELECT" => "Y",	// Разрешить несколько активных пунктов одновременно
 	),
 	false
 );?>

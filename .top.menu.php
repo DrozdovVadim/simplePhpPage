@@ -2,9 +2,9 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"/", 
+		"/main/", 
 		Array(), 
-		Array(), 
+		Array("IS_PARENT"=>"", "ONLY_EXACT_MATCH"=>"true"), 
 		"" 
 	),
 	Array(
@@ -18,12 +18,19 @@ $aMenuLinks = Array(
 		"О нас", 
 		"/o-nas/", 
 		Array(), 
-		Array(), 
+		Array("IS_PARENT"=>"true"), 
 		"" 
 	),
 	Array(
 		"Контакты", 
 		"/kontakty/", 
+		Array(), 
+		Array("IS_PARENT"=>"true"), 
+		"" 
+	),
+	Array(
+		"Обратная связь", 
+		"/obratnaya-svyaz/", 
 		Array(), 
 		Array(), 
 		"" 

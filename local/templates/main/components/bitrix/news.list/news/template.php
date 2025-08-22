@@ -1,4 +1,5 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -10,6 +11,11 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+$title = !empty($arResult['CATEGORIES']['CATEGORY_NAME']) 
+    ? $arResult['CATEGORIES']['CATEGORY_NAME'] 
+    : $arResult['NAME'];
+
+$APPLICATION->SetTitle($title);
 $this->setFrameMode(true);
 ?>
 <div class="news-list">
@@ -19,8 +25,10 @@ $this->setFrameMode(true);
 <section class="section news-section">
     <div class="container">
 		<h1 class="title">
-            Новости
+
+            <?= $arResult['CATEGORIES']['CATEGORY_NAME'] ? $arResult['CATEGORIES']['CATEGORY_NAME'] : $APPLICATION->ShowTitle() ?>
         </h1>
+
 <div class="news-wrapper">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 
