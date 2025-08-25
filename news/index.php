@@ -60,8 +60,9 @@ $APPLICATION->SetTitle("Новости");
 	)
 );?>
 <?php
+global $USER;
+$GLOBALS['arrFilter'] = [];
 $categoryCode = $_GET['category'];
-
 if ($categoryCode) {
     $category = CIBlockElement::GetList(
         [],
@@ -70,15 +71,14 @@ if ($categoryCode) {
         false,
         ["ID"]
     )->Fetch();
-
     if ($category) {
-        $GLOBALS['arrFilter'] = ["PROPERTY_CATEGORIES" => $category['ID'], "ACTIVE" => "Y"];
-    } else {
-        $GLOBALS['arrFilter'] = ["ACTIVE" => "Y"];
+        $GLOBALS['arrFilter'] = ["PROPERTY_CATEGORIES" => $category['ID']];
+		
     }
-} else {
-    $GLOBALS['arrFilter'] = ["ACTIVE" => "Y"];
-}
+} 
+$isLogin = $USER->IsAuthorized(); 
+$isLogin ? null : array_push($GLOBALS['arrFilter'], ["PROPERTY_IS_LOGIN" => 0, "ACTIVE" => "Y"]);
+
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
@@ -142,7 +142,7 @@ if ($categoryCode) {
 		"SHOW_404" => "N",
 		"SLIDER_PROPERTY" => "",
 		"SORT_BY1" => "PROPERTY_CREATION_DATE",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ID",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",

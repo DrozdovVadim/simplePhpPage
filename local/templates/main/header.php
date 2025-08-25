@@ -43,6 +43,7 @@ IncludeTemplateLangFile(__FILE__);
 	),
 	false
 );?>
+
     </div>
 </header>
 	

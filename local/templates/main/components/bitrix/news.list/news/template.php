@@ -1,5 +1,5 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-
+global $USER;
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -21,7 +21,9 @@ $this->setFrameMode(true);
 <div class="news-list">
 <?php if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
-<? endif; ?>
+<? endif; 
+
+?>
 <section class="section news-section">
     <div class="container">
 		<h1 class="title">
@@ -44,6 +46,7 @@ extract($arItem);
         <div class="news-item__date"><?= $DATE ?></div>
         <h2 class="news-item__title"><?= $NAME ?></h2>
         <?= $PREVIEW_TEXT ?>
+        <?= $PROPERTIES["IS_LOGIN"]["VALUE"]? "Для авторизованных" : "Для всех" ?>
         <div class="news-item__link">Подробнее <svg width="26" height="16" viewBox="0 0 26 16" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path

@@ -13,7 +13,9 @@
 
 $this->setFrameMode(true);
 ?>
-
+<?
+global $USER;
+if($USER->IsAuthorized()): ?>
 <?php extract($arResult); 
 ?>
 <section class="section news-detail__section">
@@ -57,3 +59,24 @@ $this->setFrameMode(true);
         </div>
 	</div>
 </section>
+<? else: ?>
+<section class="section">
+    <div class="container registration">
+        <h2>Пожалуйста авторизируйтесь, или зарегистрируйтесь!</h2>
+        <p>Даная новость доступна только авторизованным пользователям</p>
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	"auth", 
+	array(
+		"COMPONENT_TEMPLATE" => "auth",
+		"REGISTER_URL" => "",
+		"FORGOT_PASSWORD_URL" => "",
+		"PROFILE_URL" => "",
+		"SHOW_ERRORS" => "N"
+	),
+	false
+);?>
+
+    </div>
+</section>
+<? endif; ?>

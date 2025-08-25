@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/main/components/bitrix/menu/menu/script.js" => "1755852328407","/local/templates/main/components/bitrix/sale.basket.basket.line/basket/script.js" => "17561132573876",]; ?>
