@@ -1,0 +1,21 @@
+@use "style" as *;
+
+$block-name: "b-footer";
+
+.#{$block-name} {
+	width: 100%;
+
+	&__container {
+		@include container;
+
+		padding-top: 65px;
+		margin-bottom: 65px;
+		border-top: 1px solid $color-gray-dark;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 160%;
+		letter-spacing: 0%;
+	}
+}

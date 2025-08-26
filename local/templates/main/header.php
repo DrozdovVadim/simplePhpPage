@@ -3,6 +3,10 @@ IncludeTemplateLangFile(__FILE__);
 ?><!DOCTYPE html>
 <html>
 <head>
+<?php
+\TAO::frontendCss('index');
+\TAO::frontendJs('index');
+?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?$APPLICATION->ShowHead();?>
 <?if (!isset($_GET["print_course"])):?>
@@ -22,13 +26,9 @@ IncludeTemplateLangFile(__FILE__);
 
 <body>
 	<?$APPLICATION->ShowPanel();?>
-	<header class="section header">
-    <div class="container header__container">
-        <a href="/" class="header__logo-wrapper">
-            <img src="<?=SITE_TEMPLATE_PATH."/assets/images/logo.png"?>" alt="logo">
-            <p>Галактический<br>вестник</p>
-        </a>
-        <?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
+
+		<?php ob_start();
+        $APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
 	"COMPONENT_TEMPLATE" => "horizontal_multilevel",
 		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
 		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
@@ -42,8 +42,15 @@ IncludeTemplateLangFile(__FILE__);
 		"ALLOW_MULTI_SELECT" => "Y",	// Разрешить несколько активных пунктов одновременно
 	),
 	false
-);?>
+);
+$headerMenu = ob_get_clean();
 
-    </div>
-</header>
-	
+?>
+
+<?php
+
+print(\TAO::frontend()->renderBlock(
+	'common/header',
+	['menu' => $headerMenu,]
+));
+?>

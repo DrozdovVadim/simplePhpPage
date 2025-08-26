@@ -1,0 +1,12 @@
+@mixin container {
+	max-width: 1520px;
+	margin: 0 auto;
+	width: 85%;
+}
+@mixin button {
+    background-color: $color-gray;
+    border-radius: 25px;
+    width: fit-content;
+    color: $color-gray-dark;
+    padding: 15px 40px;
+}

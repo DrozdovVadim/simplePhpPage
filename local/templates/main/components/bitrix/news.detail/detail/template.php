@@ -75,6 +75,7 @@ if($USER->IsAuthorized()): ?>
 		"SHOW_ERRORS" => "N"
 	),
 	false
+
 );?>
 
     </div>

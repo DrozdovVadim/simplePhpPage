@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"]."local/php_interface/Filter.php");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
@@ -60,25 +61,9 @@ $APPLICATION->SetTitle("Новости");
 	)
 );?>
 <?php
-global $USER;
 $GLOBALS['arrFilter'] = [];
-$categoryCode = $_GET['category'];
-if ($categoryCode) {
-    $category = CIBlockElement::GetList(
-        [],
-        ["IBLOCK_ID" => 9, "CODE" => $categoryCode, "ACTIVE" => "Y"],
-        false,
-        false,
-        ["ID"]
-    )->Fetch();
-    if ($category) {
-        $GLOBALS['arrFilter'] = ["PROPERTY_CATEGORIES" => $category['ID']];
-		
-    }
-} 
-$isLogin = $USER->IsAuthorized(); 
-$isLogin ? null : array_push($GLOBALS['arrFilter'], ["PROPERTY_IS_LOGIN" => 0, "ACTIVE" => "Y"]);
-
+\php_interface\Filter::setLoginFilter();
+\php_interface\Filter::setCategoryFilter($_GET['category']);
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
