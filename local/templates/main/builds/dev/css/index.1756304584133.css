@@ -383,5 +383,185 @@ img {
   text-transform: uppercase;
   color: #2c145e;
 }
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/menu-auth/menu-auth.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+.b-menu-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.b-menu-auth__link {
+  color: #9b407a;
+}
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/navigation-menu/navigation-menu.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-navigation-menu {
+  display: flex;
+  align-items: center;
+}
+.b-navigation-menu__list {
+  border: 2px solid #841844;
+  border-radius: 50px;
+  padding: 15px 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+.b-navigation-menu li {
+  position: relative;
+}
+.b-navigation-menu a {
+  color: #841844;
+}
+.b-navigation-menu__child-list {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 10px 15px !important;
+  border-radius: 20px !important;
+  left: -15px;
+  top: 45px;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  z-index: 2;
+  background-color: white;
+}
+.b-navigation-menu__item-text {
+  position: relative;
+  cursor: pointer;
+}
+.b-navigation-menu__item-text::after {
+  content: "^";
+  rotate: 180deg;
+  position: absolute;
+  left: 100%;
+  top: 10%;
+  color: #9b407a;
+  margin-left: 3px;
+}
+.b-navigation-menu__item-text::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0%;
+  left: 0%;
+  transition: 0.5s;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #9b407a;
+}
+.b-navigation-menu__item-text:hover::before {
+  width: 100%;
+}
+.b-navigation-menu__child-list {
+  border: 2px solid #841844;
+  border-radius: 50px;
+  padding: 15px 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 10px 15px !important;
+  border-radius: 20px !important;
+  left: -15px;
+  top: 50px;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  z-index: 2;
+  background-color: white;
+}
+.b-navigation-menu__list-item:hover .b-navigation-menu__child-list {
+  opacity: 1;
+  visibility: visible;
+}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-button/main-button.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.b-main-button {
+  background-color: #ecf2f5;
+  border-radius: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #6c6e7b;
+  padding: 15px 40px;
+  margin-bottom: 20px;
+}
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-banner/main-news-banner.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-main-news-banner {
+  position: relative;
+  margin-bottom: 55px;
+  height: 646px;
+}
+.b-main-news-banner__wrapper {
+  height: 100%;
+}
+.b-main-news-banner__slide {
+  display: flex !important;
+  align-items: center;
+}
+.b-main-news-banner__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(50%);
+  transition: 0.5s;
+}
+.b-main-news-banner__img:hover {
+  filter: brightness(60%);
+}
+.b-main-news-banner__text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  margin-left: 10%;
+  max-width: 1265px;
+}
+.b-main-news-banner__title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin-bottom: 60px;
+}
+.b-main-news-banner__text p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-list/main-news-list.scss ***!
+  \******************************************************************************************************************************************************************************************************************/
+.b-main-news-list__container {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 85%;
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-title/main-title.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+.b-main-title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin-bottom: 60px;
+}
 
-/*# sourceMappingURL=index.1756215859343.css.map*/
+/*# sourceMappingURL=index.1756304584133.css.map*/

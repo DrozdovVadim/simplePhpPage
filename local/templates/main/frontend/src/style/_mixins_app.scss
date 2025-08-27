@@ -1,12 +1,33 @@
+@use "config" as *;
+
 @mixin container {
 	max-width: 1520px;
 	margin: 0 auto;
 	width: 85%;
 }
-@mixin button {
-    background-color: $color-gray;
-    border-radius: 25px;
-    width: fit-content;
-    color: $color-gray-dark;
-    padding: 15px 40px;
+
+@mixin default-button {
+	background-color: $color-gray;
+	border-radius: 25px;
+	width: fit-content;
+	color: $color-gray-dark;
+	padding: 15px 40px;
+}
+
+@mixin default-title {
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 140%;
+	letter-spacing: 0%;
+	margin-bottom: 60px;
+}
+
+@mixin navigation-list {
+	border: 2px solid #841844;
+	border-radius: 50px;
+	padding: 15px 50px;
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+	align-items: center;
 }

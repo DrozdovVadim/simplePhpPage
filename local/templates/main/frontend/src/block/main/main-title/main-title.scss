@@ -3,5 +3,5 @@
 $block-name: "b-main-title";
 
 .#{$block-name} {
-	//
+	@include default-title;
 }

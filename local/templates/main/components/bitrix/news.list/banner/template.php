@@ -11,7 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?>
+?><?/*
 <div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
@@ -41,3 +41,9 @@ $this->setFrameMode(true);
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
 </div>
+*/?>
+<? print(\TAO::frontend()->renderBlock(
+    'main/main-news-banner',
+    ['arResult' => $arResult,]
+));
+?>

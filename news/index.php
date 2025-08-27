@@ -2,7 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 require($_SERVER["DOCUMENT_ROOT"]."local/php_interface/Filter.php");
 $APPLICATION->SetTitle("Новости");
-?><?$APPLICATION->IncludeComponent(
+?>
+<? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"banner",
 	Array(
@@ -59,7 +60,8 @@ $APPLICATION->SetTitle("Новости");
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
 	)
-);?>
+);
+?>
 <?php
 $GLOBALS['arrFilter'] = [];
 \php_interface\Filter::setLoginFilter();

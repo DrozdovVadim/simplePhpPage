@@ -1,0 +1,13 @@
+@use "style" as *;
+
+$block-name: "b-menu-auth";
+
+.#{$block-name} {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	&__link {
+		color: $color-pink-dark;
+	}
+}

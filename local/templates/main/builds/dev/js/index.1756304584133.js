@@ -9,7 +9,9 @@
 
 var map = {
 	"./footer/footer.scss": "./src/block/common/footer/footer.scss",
-	"./header/header.scss": "./src/block/common/header/header.scss"
+	"./header/header.scss": "./src/block/common/header/header.scss",
+	"./menu-auth/menu-auth.scss": "./src/block/common/menu-auth/menu-auth.scss",
+	"./navigation-menu/navigation-menu.scss": "./src/block/common/navigation-menu/navigation-menu.scss"
 };
 
 
@@ -76,6 +78,161 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/menu-auth/menu-auth.scss":
+/*!***************************************************!*\
+  !*** ./src/block/common/menu-auth/menu-auth.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/common/navigation-menu/navigation-menu.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/common/navigation-menu/navigation-menu.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!***********************************************************************************!*\
+  !*** ./src/block/main/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \***********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./main-button/main-button.scss": "./src/block/main/main-button/main-button.scss",
+	"./main-news-banner/main-news-banner.js": "./src/block/main/main-news-banner/main-news-banner.js",
+	"./main-news-banner/main-news-banner.scss": "./src/block/main/main-news-banner/main-news-banner.scss",
+	"./main-news-list/main-news-list.scss": "./src/block/main/main-news-list/main-news-list.scss",
+	"./main-title/main-title.scss": "./src/block/main/main-title/main-title.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/main sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
+
+/***/ }),
+
+/***/ "./src/block/main/main-button/main-button.scss":
+/*!*****************************************************!*\
+  !*** ./src/block/main/main-button/main-button.scss ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-news-banner/main-news-banner.js":
+/*!*************************************************************!*\
+  !*** ./src/block/main/main-news-banner/main-news-banner.js ***!
+  \*************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./src/block/main/main-news-banner/main-news-banner.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/main/main-news-banner/main-news-banner.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-news-list/main-news-list.scss":
+/*!***********************************************************!*\
+  !*** ./src/block/main/main-news-list/main-news-list.scss ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-title/main-title.scss":
+/*!***************************************************!*\
+  !*** ./src/block/main/main-title/main-title.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main.js":
+/*!********************************!*\
+  !*** ./src/block/main/main.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/main sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
 
 /***/ }),
 
@@ -174,10 +331,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var style_layout_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! style/layout/base */ "./src/style/layout/base.scss");
 /* harmony import */ var block_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! block/common */ "./src/block/common/common.js");
 /* harmony import */ var block_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(block_common__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var block_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! block/main */ "./src/block/main/main.js");
+/* harmony import */ var block_main__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(block_main__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1756215859343.js.map
+//# sourceMappingURL=index.1756304584133.js.map

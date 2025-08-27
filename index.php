@@ -3,17 +3,19 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новостной портал");
 ?><section class="section">
 <div class="container">
-	<?= \TAO::frontend()->renderBlock(
-	'main/title',
-	[
-		'titleText' => $APPLICATION->ShowTitle(),
+
+	<?php print(\TAO::frontend()->renderBlock(
+		'main/main-title',
+		['titleText' => $APPLICATION->GetTitle(),]
+	)); ?>
+
+	<?php print(\TAO::frontend()->renderBlock(
+	'main/main-button',
+	['buttonText' => "Посмотри наши новости",
+	 'buttonLink' => "/news/",
 	]
-	)
-	?>
-	<h1 class="title"><?= $APPLICATION->ShowTitle() ?></h1>
-	<div class="main__show-news">
- <a href="/news/">Посмотри наши новости</a>
-	</div>
+	)); ?>
+
 </div>
  </section>
 <p>

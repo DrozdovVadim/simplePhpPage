@@ -1,0 +1,9 @@
+@use "style" as *;
+
+$block-name: "b-main-button";
+
+.#{$block-name} {
+	@include default-button;
+
+	margin-bottom: 20px;
+}

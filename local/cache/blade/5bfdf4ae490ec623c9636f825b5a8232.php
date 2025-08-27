@@ -1,0 +1,1 @@
+<h1 class="<?php echo e($block); ?>"><?php echo e($titleText); ?></h1><?php /**PATH /var/www/workspace/bitrix/www/local/templates/main/frontend/src/block/main/main-title/main-title.blade.php ENDPATH**/ ?>

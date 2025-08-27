@@ -1,0 +1,9 @@
+@use "style" as *;
+
+$block-name: "b-main-news-list";
+
+.#{$block-name} {
+	&__container {
+		@include container;
+	}
+}

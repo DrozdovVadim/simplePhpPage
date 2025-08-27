@@ -1,5 +1,5 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-global $USER;
+/*global $USER;
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -11,7 +11,7 @@ global $USER;
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$title = !empty($arResult['CATEGORIES']['CATEGORY_NAME']) 
+/*$title = !empty($arResult['CATEGORIES']['CATEGORY_NAME']) 
     ? $arResult['CATEGORIES']['CATEGORY_NAME'] 
     : $arResult['NAME'];
 
@@ -62,4 +62,11 @@ extract($arItem);
 <?php if($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
 	<br /><?=$arResult["NAV_STRING"] ?>
 <?php endif;?>
-</div>
+</div>*/
+?>
+<?= \TAO::frontend()->renderBlock(
+    'main/main-news-list',
+    ["arResult" => $arResult,
+     "APPLICATION" => $APPLICATION,]
+    )
+    ?>

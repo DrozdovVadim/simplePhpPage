@@ -1,10 +1,10 @@
-<?if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
+<?/*if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
 /**
  * @global array $arParams
  * @global CUser $USER
  * @global CMain $APPLICATION
  * @global string $cartId
- */
+
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 ?>
 <?if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'):?>
@@ -67,5 +67,13 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 			?>
 		<?endif?>
 
-<?endif?>
-	
+<?endif? */?>
+
+<?= \TAO::frontend()->renderBlock(
+	'common/menu-auth',
+	['arResult' => $arResult,
+	 'USER' => $USER,
+	 'arParams' => $arParams,
+	 'cartId' => $cartId,]
+);
+?>
