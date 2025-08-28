@@ -6,4 +6,13 @@ $block-name: "b-main-news-list";
 	&__container {
 		@include container;
 	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 340px;
+		column-gap: 40px;
+		row-gap: 82px;
+		margin-bottom: 83px;
+	}
 }

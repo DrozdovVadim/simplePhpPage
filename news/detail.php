@@ -1,13 +1,15 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новость");
-?><?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", Array(
+
+?>
+<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", Array(
 	"PATH" => "",	
 		"SITE_ID" => "s1",	
 		"START_FROM" => "0",	
 	),
 	false
-);?><?$APPLICATION->IncludeComponent(
+);?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
 	"detail", 
 	array(
@@ -53,7 +55,7 @@ $APPLICATION->SetTitle("Новость");
 			0 => "",
 			1 => "CATEGORIES",
 			2 => "CREAION_DATE",
-			3 => "",
+			3 => "IS_LOGIN",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",

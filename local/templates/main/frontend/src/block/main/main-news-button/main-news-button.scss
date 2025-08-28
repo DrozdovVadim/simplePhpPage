@@ -1,0 +1,17 @@
+@use "style" as *;
+
+$block-name: "b-main-news-button";
+
+.#{$block-name} {
+	&__block {
+		@include news-button;
+	}
+
+	&__block-svg {
+		rotate: 180deg;
+	}
+
+	&__link {
+		@include news-button;
+	}
+}

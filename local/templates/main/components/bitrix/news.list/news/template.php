@@ -67,6 +67,7 @@ extract($arItem);
 <?= \TAO::frontend()->renderBlock(
     'main/main-news-list',
     ["arResult" => $arResult,
-     "APPLICATION" => $APPLICATION,]
+     "APPLICATION" => $APPLICATION,
+     "arParams" => $arParams, ]
     )
     ?>

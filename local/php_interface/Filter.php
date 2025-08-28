@@ -10,6 +10,7 @@ class Filter
     {
         array_push($GLOBALS["arrFilter"], ["ACTIVE" => "Y"]);
         global $USER;
+
         $isLogin = $USER->IsAuthorized();
         $isLogin ? null : array_push($GLOBALS['arrFilter'], ["PROPERTY_IS_LOGIN" => 0, "ACTIVE" => "Y"]);
         return $GLOBALS["arrFilter"];

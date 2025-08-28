@@ -1,0 +1,46 @@
+@use "style" as *;
+
+$block-name: "b-main-news-item";
+
+.#{$block-name} {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	cursor: pointer;
+	justify-content: space-between;
+	text-decoration: none;
+	color: unset;
+	outline: none;
+
+	&__date {
+		padding: 6px 18px;
+		border-radius: 20px;
+		background-color: $color-gray;
+		width: fit-content;
+		color: $color-gray-dark;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: 0%;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		color: black;
+		transition: 0.5s;
+	}
+
+	& p {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+		letter-spacing: 0%;
+	}
+
+	&:hover &__title {
+		color: $color-purple-dark;
+	}
+}

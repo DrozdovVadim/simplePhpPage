@@ -120,10 +120,18 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./main-breadcrumbs/main-breadcrumbs.scss": "./src/block/main/main-breadcrumbs/main-breadcrumbs.scss",
 	"./main-button/main-button.scss": "./src/block/main/main-button/main-button.scss",
+	"./main-categories/main-categories.scss": "./src/block/main/main-categories/main-categories.scss",
+	"./main-detail-news/main-detail-news.scss": "./src/block/main/main-detail-news/main-detail-news.scss",
+	"./main-login-form/main-login-form.scss": "./src/block/main/main-login-form/main-login-form.scss",
 	"./main-news-banner/main-news-banner.js": "./src/block/main/main-news-banner/main-news-banner.js",
 	"./main-news-banner/main-news-banner.scss": "./src/block/main/main-news-banner/main-news-banner.scss",
+	"./main-news-button/main-news-button.scss": "./src/block/main/main-news-button/main-news-button.scss",
+	"./main-news-item/main-news-item.scss": "./src/block/main/main-news-item/main-news-item.scss",
 	"./main-news-list/main-news-list.scss": "./src/block/main/main-news-list/main-news-list.scss",
+	"./main-page-pagination/main-page-pagination.scss": "./src/block/main/main-page-pagination/main-page-pagination.scss",
+	"./main-register-form/main-register-form.scss": "./src/block/main/main-register-form/main-register-form.scss",
 	"./main-title/main-title.scss": "./src/block/main/main-title/main-title.scss"
 };
 
@@ -149,10 +157,74 @@ webpackContext.id = "./src/block/main sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js
 
 /***/ }),
 
+/***/ "./src/block/main/main-breadcrumbs/main-breadcrumbs.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/main/main-breadcrumbs/main-breadcrumbs.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
 /***/ "./src/block/main/main-button/main-button.scss":
 /*!*****************************************************!*\
   !*** ./src/block/main/main-button/main-button.scss ***!
   \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-categories/main-categories.scss":
+/*!*************************************************************!*\
+  !*** ./src/block/main/main-categories/main-categories.scss ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-detail-news/main-detail-news.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/main/main-detail-news/main-detail-news.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-login-form/main-login-form.scss":
+/*!*************************************************************!*\
+  !*** ./src/block/main/main-login-form/main-login-form.scss ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -191,10 +263,74 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/block/main/main-news-button/main-news-button.scss":
+/*!***************************************************************!*\
+  !*** ./src/block/main/main-news-button/main-news-button.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-news-item/main-news-item.scss":
+/*!***********************************************************!*\
+  !*** ./src/block/main/main-news-item/main-news-item.scss ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
 /***/ "./src/block/main/main-news-list/main-news-list.scss":
 /*!***********************************************************!*\
   !*** ./src/block/main/main-news-list/main-news-list.scss ***!
   \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-page-pagination/main-page-pagination.scss":
+/*!***********************************************************************!*\
+  !*** ./src/block/main/main-page-pagination/main-page-pagination.scss ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./src/block/main/main-register-form/main-register-form.scss":
+/*!*******************************************************************!*\
+  !*** ./src/block/main/main-register-form/main-register-form.scss ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -340,4 +476,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1756304584133.js.map
+//# sourceMappingURL=index.1756390089799.js.map

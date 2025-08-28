@@ -1,0 +1,38 @@
+@use "style" as *;
+
+$block-name: "b-main-page-pagination";
+
+.#{$block-name} {
+	@include container;
+
+	&__wrapper {
+		margin-bottom: 83px;
+		margin-left: auto;
+		width: fit-content;
+		margin-right: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		column-gap: 16px;
+	}
+
+	&__arrow-prev {
+		@include pagination-arrow;
+
+		rotate: 180deg;
+	}
+
+	&__arrow-next {
+		@include pagination-arrow;
+	}
+
+	&__active {
+		@include pagination-item;
+
+		background-color: #841844;
+		color: white;
+	}
+
+	&__item {
+		@include pagination-item;
+	}
+}

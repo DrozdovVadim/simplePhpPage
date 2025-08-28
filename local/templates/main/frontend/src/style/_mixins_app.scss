@@ -14,6 +14,34 @@
 	padding: 15px 40px;
 }
 
+@mixin news-button {
+	padding: 16px 40px;
+	border-radius: 50px;
+	border: 2px solid $color-pink-dark;
+	width: fit-content;
+	transition: 0.5s;
+	text-decoration: none;
+	color: $color-purple-dark;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	&:hover {
+		background-color: $color-purple-dark;
+		color: white;
+	}
+
+	&:hover path {
+		fill: white;
+	}
+}
+
 @mixin default-title {
 	font-weight: 600;
 	font-size: 64px;
@@ -30,4 +58,51 @@
 	flex-direction: row;
 	gap: 60px;
 	align-items: center;
+}
+
+@mixin pagination-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 41px;
+	border-radius: 50px;
+	border: 2px solid $color-purple-dark;
+	transition: 0.5s;
+
+	&:hover {
+		background-color: #841844;
+		color: white;
+	}
+
+	& path {
+		transition: 0.5s;
+	}
+
+	&:hover path {
+		fill: white;
+	}
+}
+
+@mixin pagination-item {
+	color: $color-purple-dark;
+	box-sizing: border-box;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 2px solid $color-purple-dark;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-transform: uppercase;
+	transition: 0.5s;
+	width: 56px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background-color: #841844;
+		color: white;
+	}
 }

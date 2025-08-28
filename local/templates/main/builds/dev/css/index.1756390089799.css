@@ -317,6 +317,10 @@ template {
   box-sizing: inherit;
 }
 
+* {
+  font-family: "Open Sans";
+}
+
 html {
   box-sizing: border-box;
 }
@@ -486,6 +490,32 @@ img {
   opacity: 1;
   visibility: visible;
 }
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-breadcrumbs/main-breadcrumbs.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-main-breadcrumbs {
+  width: 100%;
+  padding-top: 72px;
+  border-top: 1px solid #6c6e7b;
+}
+.b-main-breadcrumbs__container {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 85%;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.b-main-breadcrumbs__link {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+.b-main-breadcrumbs__stick {
+  margin: 0 5px;
+}
+.b-main-breadcrumbs__span {
+  color: #6c6e7b;
+}
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-button/main-button.scss ***!
   \************************************************************************************************************************************************************************************************************/
@@ -498,6 +528,70 @@ img {
   padding: 15px 40px;
   margin-bottom: 20px;
 }
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-categories/main-categories.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-detail-news/main-detail-news.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-main-detail-news__container {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 85%;
+}
+.b-main-detail-news__date {
+  padding: 6px 18px;
+  border-radius: 20px;
+  background-color: #ecf2f5;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #6c6e7b;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+}
+.b-main-detail-news__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+.b-main-detail-news__announce {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0%;
+  color: #841844;
+}
+.b-main-detail-news__text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.b-main-detail-news__img {
+  width: 45%;
+  aspect-ratio: 13/10;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.b-main-detail-news__detail-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  row-gap: 22px;
+}
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-login-form/main-login-form.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
+
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-banner/main-news-banner.scss ***!
   \**********************************************************************************************************************************************************************************************************************/
@@ -545,6 +639,106 @@ img {
   line-height: 160%;
   letter-spacing: 0%;
 }
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-button/main-news-button.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.b-main-news-button__block {
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: 2px solid #9b407a;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #841844;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.b-main-news-button__block:hover {
+  background-color: #841844;
+  color: white;
+}
+.b-main-news-button__block:hover path {
+  fill: white;
+}
+.b-main-news-button__block-svg {
+  rotate: 180deg;
+}
+.b-main-news-button__link {
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: 2px solid #9b407a;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #841844;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.b-main-news-button__link:hover {
+  background-color: #841844;
+  color: white;
+}
+.b-main-news-button__link:hover path {
+  fill: white;
+}
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-item/main-news-item.scss ***!
+  \******************************************************************************************************************************************************************************************************************/
+.b-main-news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  cursor: pointer;
+  justify-content: space-between;
+  text-decoration: none;
+  color: unset;
+  outline: none;
+}
+.b-main-news-item__date {
+  padding: 6px 18px;
+  border-radius: 20px;
+  background-color: #ecf2f5;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #6c6e7b;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.b-main-news-item__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: black;
+  transition: 0.5s;
+}
+.b-main-news-item p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+.b-main-news-item:hover .b-main-news-item__title {
+  color: #841844;
+}
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-news-list/main-news-list.scss ***!
   \******************************************************************************************************************************************************************************************************************/
@@ -553,6 +747,123 @@ img {
   margin: 0 auto;
   width: 85%;
 }
+.b-main-news-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 340px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 82px;
+  margin-bottom: 83px;
+}
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-page-pagination/main-page-pagination.scss ***!
+  \******************************************************************************************************************************************************************************************************************************/
+.b-main-page-pagination {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 85%;
+}
+.b-main-page-pagination__wrapper {
+  margin-bottom: 83px;
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.b-main-page-pagination__arrow-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 41px;
+  border-radius: 50px;
+  border: 2px solid #841844;
+  transition: 0.5s;
+  rotate: 180deg;
+}
+.b-main-page-pagination__arrow-prev:hover {
+  background-color: #841844;
+  color: white;
+}
+.b-main-page-pagination__arrow-prev path {
+  transition: 0.5s;
+}
+.b-main-page-pagination__arrow-prev:hover path {
+  fill: white;
+}
+.b-main-page-pagination__arrow-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 41px;
+  border-radius: 50px;
+  border: 2px solid #841844;
+  transition: 0.5s;
+}
+.b-main-page-pagination__arrow-next:hover {
+  background-color: #841844;
+  color: white;
+}
+.b-main-page-pagination__arrow-next path {
+  transition: 0.5s;
+}
+.b-main-page-pagination__arrow-next:hover path {
+  fill: white;
+}
+.b-main-page-pagination__active {
+  color: #841844;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #841844;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 56px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #841844;
+  color: white;
+}
+.b-main-page-pagination__active:hover {
+  background-color: #841844;
+  color: white;
+}
+.b-main-page-pagination__item {
+  color: #841844;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #841844;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 56px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.b-main-page-pagination__item:hover {
+  background-color: #841844;
+  color: white;
+}
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-register-form/main-register-form.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/main/main-title/main-title.scss ***!
   \**********************************************************************************************************************************************************************************************************/
@@ -564,4 +875,4 @@ img {
   margin-bottom: 60px;
 }
 
-/*# sourceMappingURL=index.1756304584133.css.map*/
+/*# sourceMappingURL=index.1756390089799.css.map*/

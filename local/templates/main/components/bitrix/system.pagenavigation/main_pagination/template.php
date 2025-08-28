@@ -1,7 +1,7 @@
-<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<?/*php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <?php if ($arResult["NavRecordCount"] == 0 || ($arResult["NavPageCount"] == 1 && !$arResult["NavShowAll"])) return; ?>
 
-<div class="container">
+<div* class="container">
     <div class="pagination">
         <?php
         $currentPage = $arResult["NavPageNomer"];
@@ -60,4 +60,9 @@
             </a>
         <?php endif; ?>
     </div>
-</div>
+</div*/?>
+<?= TAO::frontend()->renderBlock(
+    'main/main-page-pagination',
+    ['arResult' => $arResult]
+    )
+    ?>
