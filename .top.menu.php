@@ -35,5 +35,12 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
+	Array(
+		"Книги", 
+		"/books/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
 );
 ?>

@@ -1,20 +1,20 @@
-2025-Aug-28 08:47:25 Наличие необходимых модулей php (check_php_modules): Ok
+2025-Aug-29 08:50:12 Наличие необходимых модулей php (check_php_modules): Ok
 Все необходимые модули установлены
-2025-Aug-28 08:47:25 Обязательные параметры PHP (check_php_settings): Ok
+2025-Aug-29 08:50:12 Обязательные параметры PHP (check_php_settings): Ok
 Настройки правильные
-2025-Aug-28 08:47:25 Модули веб-сервера (check_security): Ok
+2025-Aug-29 08:50:12 Модули веб-сервера (check_security): Ok
 Конфликтов не выявлено
-2025-Aug-28 08:47:25 Значения переменных сервера (check_server_vars): Ok
+2025-Aug-29 08:50:12 Значения переменных сервера (check_server_vars): Ok
 Корректные
-2025-Aug-28 08:47:25 Сохранение сессии (check_session): Ok
+2025-Aug-29 08:50:12 Сохранение сессии (check_session): Ok
 50% done
-2025-Aug-28 08:47:25 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+2025-Aug-29 08:50:12 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
 Правильные. Сайт работает в UTF кодировке
-2025-Aug-28 08:47:25 Служебные скрипты в корне сайта (check_install_scripts): Ok
+2025-Aug-29 08:50:12 Служебные скрипты в корне сайта (check_install_scripts): Ok
 Отсутствуют
-2025-Aug-28 08:47:25 Работа с сокетами (check_socket): Ok
-Connection to bitrix.drozdov:80	Success
+2025-Aug-29 08:50:12 Работа с сокетами (check_socket): Ok
+Connection to bitrix.drozdov.techart.intranet:80	Success
 
 Успешно
-2025-Aug-28 08:47:25 Выполнение агентов на cron (check_bx_crontab): Warning
+2025-Aug-29 08:50:12 Выполнение агентов на cron (check_bx_crontab): Warning
 Замечание. Агенты выполняются на хитах, рекомендуется перевести выполнение агентов на cron
