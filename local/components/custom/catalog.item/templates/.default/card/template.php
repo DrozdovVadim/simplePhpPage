@@ -674,8 +674,7 @@ use Bitrix\Main\Localization\Loc;
 	?>
 </div> */ ?>
 <?= \TAO::frontend()->renderBlock(
-	'books/books-list-item',
-	['arResult' => $arResult,
-	 'item' => $item,
-	 'itemIds' =>$itemIds]
+	'books/books-product-item',
+	['item' => $item,
+	 'itemIds' =>$itemIds,]
 ) ?>

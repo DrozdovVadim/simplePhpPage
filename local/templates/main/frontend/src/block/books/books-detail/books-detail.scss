@@ -1,0 +1,71 @@
+@use "style" as *;
+
+$block-name: "b-books-detail";
+
+@mixin information {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.show-param {
+	display: block;
+}
+
+.#{$block-name} {
+	&__content-wrapper {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__inf {
+		@include information;
+	}
+
+	&__inf-text {
+		opacity: 0.7;
+		display: block;
+		margin-top: 10px;
+		width: fit-content;
+		padding: 10px 15px;
+		background-color: $color-purple-dark;
+		color: white;
+		border-radius: 25px;
+		transition: 0.3s;
+	}
+
+	&__img-wrapper:hover &__inf-text {
+		opacity: 1;
+	}
+
+	&__tabs-wrapper span {
+		position: relative;
+		padding-bottom: 5px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	&__tabs-wrapper span:first-child {
+		margin-right: 20px;
+	}
+
+	&__tabs-wrapper span::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: $color-purple-dark;
+		transition: 0.3s;
+	}
+
+	&__tabs-wrapper span:hover::after {
+		width: 100%;
+	}
+
+	&__params-hidden {
+		display: none;
+	}
+}

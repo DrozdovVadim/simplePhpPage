@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/components/custom/catalog.element/templates/.default/script.js" => "175671843060348",]; ?>
