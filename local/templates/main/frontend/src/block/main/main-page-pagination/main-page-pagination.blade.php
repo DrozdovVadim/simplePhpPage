@@ -35,7 +35,7 @@
         
         <!-- Стрелка "назад" -->
         @if ($currentPage == $totalPages)
-            <a class="{{ @block->elem('arrow-prev') }}" href="{{ $link(1) }}">
+            <a class="{{ $block->elem('arrow-prev') }}" href="{{ $link(1) }}">
                 {!! $arrow !!}
             </a>
         @endif

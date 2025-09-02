@@ -15,29 +15,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"О нас", 
-		"/o-nas/", 
-		Array(), 
-		Array("IS_PARENT"=>"true"), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"/kontakty/", 
-		Array(), 
-		Array("IS_PARENT"=>"true"), 
-		"" 
-	),
-	Array(
-		"Обратная связь", 
-		"/obratnaya-svyaz/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Книги", 
 		"/books/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"книги торговый", 
+		"/buy-books/", 
 		Array(), 
 		Array(), 
 		"" 

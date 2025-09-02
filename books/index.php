@@ -143,6 +143,7 @@ $APPLICATION->SetTitle("Книги");
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
+			0 => "РУБЛИ",
 		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",

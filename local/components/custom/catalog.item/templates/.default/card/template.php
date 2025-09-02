@@ -29,6 +29,7 @@ use Bitrix\Main\Localization\Loc;
  * @var CatalogSectionComponent $component
  */
 ?>
+
 <?php /*
 <div class="product-item">
 	<? if ($itemHasDetailUrl): ?>
@@ -676,5 +677,7 @@ use Bitrix\Main\Localization\Loc;
 <?= \TAO::frontend()->renderBlock(
 	'books/books-product-item',
 	['item' => $item,
-	 'itemIds' =>$itemIds,]
+	 'itemIds' =>$itemIds,
+	 'price' => $price,
+	 'arParams' => $arParams]
 ) ?>
