@@ -60,8 +60,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset($
 				"AUTHOR" => $_POST["user_name"],
 				"AUTHOR_EMAIL" => $_POST["user_email"],
 				"EMAIL_TO" => $arParams["EMAIL_TO"],
-				"TEXT" => $_POST["MESSAGE"],
+				"TEXT" => $_POST["TEXT"],
 				"RADIO" => $_POST["RADIO"],
+				"CHECK" => $_POST["CHECK"],
 			);
 			if(!empty($arParams["EVENT_MESSAGE_ID"]))
 			{

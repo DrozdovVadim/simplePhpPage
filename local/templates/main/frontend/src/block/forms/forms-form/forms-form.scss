@@ -3,5 +3,9 @@
 $block-name: "b-forms-form";
 
 .#{$block-name} {
-	//
+	padding: 50px;
+	border-radius: 25px;
+	border: 1px solid $color-purple-dark;
+	width: 500px;
+	margin: 0 auto 0 100px;
 }

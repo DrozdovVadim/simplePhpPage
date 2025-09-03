@@ -22,8 +22,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"книги торговый", 
-		"/buy-books/", 
+		"Обратная связь", 
+		"/obratnaya-svyaz/", 
 		Array(), 
 		Array(), 
 		"" 

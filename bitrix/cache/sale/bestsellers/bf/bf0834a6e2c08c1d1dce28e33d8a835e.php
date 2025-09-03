@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001756817683';
-$dateexpire = '001756853683';
+$datecreate = '001756907114';
+$dateexpire = '001756943114';
 $ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:15:"OFFER_IBLOCK_ID";i:0;}}';
 return true;
 ?>
