@@ -3,5 +3,13 @@
 $block-name: "b-forms-input-text";
 
 .#{$block-name} {
-	//
+	@include form-input__wrapper;
+
+	&__input {
+		@include form-input;
+	}
+
+	&__label {
+		width: 100px;
+	}
 }

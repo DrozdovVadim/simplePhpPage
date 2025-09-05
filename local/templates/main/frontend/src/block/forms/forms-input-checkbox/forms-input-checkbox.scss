@@ -3,5 +3,12 @@
 $block-name: "b-forms-input-checkbox";
 
 .#{$block-name} {
-	//
+	@include form-input__wrapper;
+
+	border-radius: 15px;
+	border: 2px solid $color-pink-dark;
+	padding: 10px;
+	justify-content: left;
+	gap: 30px;
+	width: fit-content;
 }

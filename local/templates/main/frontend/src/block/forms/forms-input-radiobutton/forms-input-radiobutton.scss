@@ -3,5 +3,87 @@
 $block-name: "b-forms-input-radiobutton";
 
 .#{$block-name} {
-	//
+	@include form-input__wrapper;
+
+	justify-content: left;
+	padding: 5px;
+	border: 1px solid $color-purple-dark;
+	border-radius: 8px;
+	width: 40%;
+	transition: 0.3s;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	box-shadow: 1px 1px 4px rgba(0 0 0 / 58.2%);
+
+	&__input {
+		width: 100%;
+		opacity: 0;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	&:hover {
+		background-color: $color-pink-dark;
+		color: white;
+		box-shadow: 2px 2px 6px rgba(0 0 0 / 75.3%);
+	}
+
+	&__label {
+		padding-left: 30px;
+		position: relative;
+		cursor: pointer;
+
+		&::before {
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			content: "";
+			border: 1px solid black;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 4px;
+			transition: 0.3s;
+			box-sizing: border-box;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: transparent;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 7px;
+			transition: 0.3s;
+		}
+	}
+
+	&:hover &__label::before {
+		border-color: white;
+	}
+
+	&__input:checked + &__label::before {
+		border-color: $color-purple-dark;
+	}
+
+	&__input:checked + &__label::after {
+		background-color: $color-purple-dark;
+	}
+
+	&__input:checked:hover + &__label::before {
+		border-color: white;
+	}
+
+	&__input:checked:hover + &__label::after {
+		background-color: white;
+	}
 }

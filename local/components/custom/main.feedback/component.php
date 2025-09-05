@@ -63,6 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset($
 				"TEXT" => $_POST["TEXT"],
 				"RADIO" => $_POST["RADIO"],
 				"CHECK" => $_POST["CHECK"],
+				"TEL" => $_POST["TEL"],
 			);
 			if(!empty($arParams["EVENT_MESSAGE_ID"]))
 			{

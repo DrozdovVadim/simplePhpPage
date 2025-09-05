@@ -1,10 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Книги");
+\TAO::frontendCss('forms');
+\TAO::frontendJs('forms');
+
 ?><br>
  <section>
-<div class="container">
-	 <?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog", 
 	array(
@@ -69,7 +71,7 @@ $APPLICATION->SetTitle("Книги");
 		"ELEMENT_SORT_ORDER2" => "desc",
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"FILTER_NAME" => "",
-		"FILTER_VIEW_MODE" => "VERTICAL",
+		"FILTER_VIEW_MODE" => "HORIZONTAL",
 		"GIFTS_DETAIL_BLOCK_TITLE" => "Выберите один из подарков",
 		"GIFTS_DETAIL_HIDE_BLOCK_TITLE" => "N",
 		"GIFTS_DETAIL_PAGE_ELEMENT_COUNT" => "4",
@@ -204,7 +206,7 @@ $APPLICATION->SetTitle("Книги");
 		"USE_COMPARE" => "N",
 		"USE_ELEMENT_COUNTER" => "Y",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"USE_GIFTS_DETAIL" => "Y",
 		"USE_GIFTS_MAIN_PR_SECTION_LIST" => "Y",
 		"USE_GIFTS_SECTION" => "Y",
@@ -220,6 +222,4 @@ $APPLICATION->SetTitle("Книги");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
-</div>
- </section>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?> </section>

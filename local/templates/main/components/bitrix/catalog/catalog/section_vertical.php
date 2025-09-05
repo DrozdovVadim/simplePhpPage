@@ -26,7 +26,7 @@ if ($isFilter || $isSidebar): ?>
 			<div class="bx-sidebar-block">
 				<?
 				$APPLICATION->IncludeComponent(
-					"bitrix:catalog.smart.filter",
+					"custom:catalog.smart.filter",
 					"",
 					array(
 						"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],

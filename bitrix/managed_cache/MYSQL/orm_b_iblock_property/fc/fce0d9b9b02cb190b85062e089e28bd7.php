@@ -1,7 +1,0 @@
-<?
-if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001756907114';
-$dateexpire = '001756993514';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:3:{i:0;a:13:{s:2:"ID";s:2:"13";s:9:"IBLOCK_ID";s:2:"10";s:4:"NAME";s:10:"Автор";s:6:"ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:4:"CODE";s:6:"AUTHOR";s:13:"DEFAULT_VALUE";s:0:"";s:13:"PROPERTY_TYPE";s:1:"E";s:8:"MULTIPLE";s:1:"Y";s:14:"LINK_IBLOCK_ID";s:2:"11";s:7:"VERSION";s:1:"1";s:9:"USER_TYPE";s:5:"EList";s:18:"USER_TYPE_SETTINGS";s:80:"a:4:{s:4:"size";i:1;s:5:"width";i:0;s:5:"group";s:1:"N";s:8:"multiple";s:1:"N";}";}i:1;a:13:{s:2:"ID";s:2:"14";s:9:"IBLOCK_ID";s:2:"10";s:4:"NAME";s:8:"Жанр";s:6:"ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:4:"CODE";s:5:"ZHANR";s:13:"DEFAULT_VALUE";s:0:"";s:13:"PROPERTY_TYPE";s:1:"L";s:8:"MULTIPLE";s:1:"Y";s:14:"LINK_IBLOCK_ID";s:1:"0";s:7:"VERSION";s:1:"1";s:9:"USER_TYPE";N;s:18:"USER_TYPE_SETTINGS";s:6:"a:0:{}";}i:2;a:13:{s:2:"ID";s:2:"15";s:9:"IBLOCK_ID";s:2:"10";s:4:"NAME";s:16:"Переплет";s:6:"ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:4:"CODE";s:8:"PEREPLET";s:13:"DEFAULT_VALUE";s:0:"";s:13:"PROPERTY_TYPE";s:1:"L";s:8:"MULTIPLE";s:1:"N";s:14:"LINK_IBLOCK_ID";s:1:"0";s:7:"VERSION";s:1:"1";s:9:"USER_TYPE";N;s:18:"USER_TYPE_SETTINGS";s:6:"a:0:{}";}}}';
-return true;
-?>

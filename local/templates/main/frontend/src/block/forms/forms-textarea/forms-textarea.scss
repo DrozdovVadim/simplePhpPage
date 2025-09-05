@@ -3,5 +3,20 @@
 $block-name: "b-forms-textarea";
 
 .#{$block-name} {
-	//
+	@include form-input__wrapper;
+
+	flex-direction: column;
+	gap: 10px;
+	align-items: start;
+	margin-left: 25px;
+
+	&__textarea {
+		@include form-input;
+
+		margin: 0 auto;
+		width: 90%;
+		height: 150px;
+		overflow-y: scroll;
+		resize: none;
+	}
 }

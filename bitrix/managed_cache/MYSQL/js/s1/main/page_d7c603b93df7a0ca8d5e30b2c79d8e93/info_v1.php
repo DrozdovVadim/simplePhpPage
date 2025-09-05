@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/components/custom/catalog.smart.filter/templates/.default/script.js" => "175698548514592",]; ?>

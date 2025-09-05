@@ -26,7 +26,7 @@ else
 				<div class="col-xs-12<?=(isset($arParams['FILTER_HIDE_ON_MOBILE']) && $arParams['FILTER_HIDE_ON_MOBILE'] === 'Y' ? ' hidden-xs' : '')?>">
 					<?
 					$APPLICATION->IncludeComponent(
-						"bitrix:catalog.smart.filter",
+						"custom:catalog.smart.filter",
 						"",
 						array(
 							"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],

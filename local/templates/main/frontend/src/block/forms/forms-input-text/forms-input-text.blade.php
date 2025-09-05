@@ -1,7 +1,7 @@
 
-<div>
+<div class="{{$block}}">
     @if(!empty($item['labelText']))
-    <label for="">{{ $item['labelText'] }}</label>
+    <label class="{{ $block->elem('label') }}" for="">{{ $item['labelText'] }}</label>
 @endif
-<input type="{{ $item['type'] }}" placeholder="{{ $input['placeholder'] }}" name="{{ $item['name'] }}" {{$input['required'] ? 'required' : ''}}>
+<input class="{{ $block->elem('input') }}" type="{{ $item['type'] }}" placeholder="{{ $input['placeholder'] }}" data-name="{{ $item['data'] }}" name="{{ $item['name'] }}" {{$item['required'] ? 'required' : ''}} >
 </div>

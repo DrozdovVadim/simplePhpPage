@@ -47,8 +47,9 @@ $formItems['inputs'] = [
         'name' => 'user_name',
         'placeholder' => '',
         'value' => '',
-        'required' => '1',
+        'required' => '0',
         'type' => 'text',
+        'data' => "Имя",
     ],
     [
         'template' => 'input-text',
@@ -56,8 +57,20 @@ $formItems['inputs'] = [
         'name' => 'user_email',
         'placeholder' => '',
         'value' => '',
-        'required' => '1',
+        'required' => '0',
         'type' => 'email',
+        'data' => "E-mail",
+    ],
+        [
+        'template' => 'input-text',
+        'labelText' => 'Ваш Номер телефона',
+        'name' => 'TEL',
+        'placeholder' => '',
+        'value' => '',
+        'required' => '0',
+        'type' => 'tel',
+        'data' => "Номер телефона",
+        'pattern' => 'pattern=[0-9]*'
     ],
 ];
 foreach($arResult['CATEGORIES']['ITEMS'] as $cat)
@@ -71,21 +84,25 @@ foreach($arResult['CATEGORIES']['ITEMS'] as $cat)
         'NAME' => $cat['NAME'],
         'name' => 'RADIO',
         'template' => 'input-radiobutton',
+        'data' => "Категория",
     ]);
 }
 array_push($formItems['check'],
     [
     'text' => 'Нажимая кнопку "Отправить" я соглашаюсь на обработку персональных данных',
     'template' => 'input-checkbox',
-    'required' => 1,   
+    'required' => 1, 
+    'id' => 'submitBtn', 
+    'data' => "Чекбокс", 
+    'name' => 'CHECK',
     ]);
     
 array_push($formItems['textarea'], [
     'text' => 'Напишите сообщение',
     'template' => 'textarea',
-    'required' => 1,   
-]);    
-
+    'required' => 1, 
+    'data' => "Сообщение",  
+]);   
 
      
 

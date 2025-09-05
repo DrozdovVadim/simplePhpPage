@@ -2,7 +2,7 @@
 	namespace TAO\CachedInfoblock;
 use TAO\Infoblock;
 
-/* infoblock ID=10, code=PEREPLET */
+/* infoblock ID=10, code=BESTSELLER */
 class books extends Infoblock
 {
 public function title()
@@ -33,6 +33,8 @@ return array(
             'TMP_ID' => 'a94dcecbbeeca0715a3c1184e816aa11',
             'INDEX_SECTION' => 'Y',
             'WORKFLOW' => 'N',
+            'SECTION_PROPERTY' => 'Y',
+            'PROPERTY_INDEX' => 'I',
             'SECTIONS_NAME' => 'Разделы',
             'SECTION_NAME' => 'Раздел',
             'FULLTEXT_INDEX' => 'N',
@@ -371,7 +373,6 @@ return array(
                 'NAME' => 'Жанр',
                 'PROPERTY_TYPE' => 'L',
                 'MULTIPLE' => 'Y',
-                'USER_TYPE_SETTINGS' => 'a:0:{}',
                 'ITEMS' => array(
                     5 => 'Биография',
                     10 => 'Детектив',
@@ -389,10 +390,18 @@ return array(
             'PEREPLET' => array(
                 'NAME' => 'Переплет',
                 'PROPERTY_TYPE' => 'L',
-                'USER_TYPE_SETTINGS' => 'a:0:{}',
                 'ITEMS' => array(
                     2 => 'Мягкий',
                     1 => 'Твердый',
+                ),
+            ),
+            'BESTSELLER' => array(
+                'NAME' => 'Бестселлер',
+                'PROPERTY_TYPE' => 'L',
+                'IS_REQUIRED' => 'Y',
+                'ITEMS' => array(
+                    1 => 'Да',
+                    2 => 'Нет',
                 ),
             ),
         );
